@@ -19,8 +19,6 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener
 {
 
-    Button button, button2;
-
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -30,8 +28,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        button= (Button) findViewById(R.id.button);
-        button2 = (Button) findViewById(R.id.button2);
+        Button button= (Button) findViewById(R.id.button);
+        Button button2 = (Button) findViewById(R.id.button2);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
