@@ -10,17 +10,11 @@
     tools:showIn="@layout/app_bar_main"
     tools:ignore="GradleDependency">
 
-
-<TextView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="adkndlkjfnldnfldkjjnfl"/>
-    
     <LinearLayout
+        android:id="@+id/layout1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
         tools:ignore="UselessParent">
 
     <Button
@@ -38,5 +32,13 @@
         android:text="Speech To Text"
         tools:ignore="ButtonStyle,HardcodedText,MissingConstraints"
         android:layout_weight="1"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/button3"
+            android:text="ListView with Count Limit"
+            tools:ignore="ButtonStyle,HardcodedText,MissingConstraints"
+            android:layout_weight="1"/>
     </LinearLayout>
 </RelativeLayout>

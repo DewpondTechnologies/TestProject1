@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ionicapp.hp.sample.ListViewWithCount"
+    tools:ignore="GradleDependency">
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@+id/addItem"
+        android:hint="Add a new item to List View"
+        android:layout_marginTop="5dp"
+        tools:ignore="HardcodedText,MissingConstraints" />
+
+    <Button
+        android:id="@+id/addItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add"
+        android:layout_alignParentEnd="true"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="280dp"
+        tools:ignore="HardcodedText,MissingConstraints" />
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText"
+        tools:ignore="MissingConstraints">
+    </ListView>
+</RelativeLayout>

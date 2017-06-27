@@ -1,21 +1,20 @@
 package com.ionicapp.hp.sample;
 
-import java.util.Locale;
-
 import android.app.Activity;
 import android.os.Bundle;
-import android.speech.tts.TextToSpeech;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import java.util.Locale;
+
 @SuppressWarnings("ALL")
-public class AndroidTextToSpeechActivity extends Activity implements TextToSpeech.OnInitListener
+public class TextToSpeech extends Activity implements android.speech.tts.TextToSpeech.OnInitListener
 {
 	/** Called when the activity is first created. */
 
-	private TextToSpeech tts;
+	private android.speech.tts.TextToSpeech tts;
 	private Button btnSpeak;
 	private EditText txtText;
 
@@ -24,7 +23,7 @@ public class AndroidTextToSpeechActivity extends Activity implements TextToSpeec
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.text_to_speech);
 
-		tts = new TextToSpeech(this, this);
+		tts = new android.speech.tts.TextToSpeech(this, this);
 
 		btnSpeak = (Button) findViewById(R.id.btnSpeak);
 
@@ -57,7 +56,7 @@ public class AndroidTextToSpeechActivity extends Activity implements TextToSpeec
 	{
 		// TODO Auto-generated method stub
 
-		if (status == TextToSpeech.SUCCESS)
+		if (status == android.speech.tts.TextToSpeech.SUCCESS)
 		{
 			int result = tts.setLanguage(Locale.US);
 
@@ -65,8 +64,8 @@ public class AndroidTextToSpeechActivity extends Activity implements TextToSpeec
 
 			// tts.setSpeechRate(2); // set speech speed rate
 
-			if (result == TextToSpeech.LANG_MISSING_DATA
-					|| result == TextToSpeech.LANG_NOT_SUPPORTED) {
+			if (result == android.speech.tts.TextToSpeech.LANG_MISSING_DATA
+					|| result == android.speech.tts.TextToSpeech.LANG_NOT_SUPPORTED) {
 				Log.e("TTS", "Language is not supported");
 			}
 			else
@@ -84,6 +83,6 @@ public class AndroidTextToSpeechActivity extends Activity implements TextToSpeec
 	private void speakOut()
 	{
 		String text = txtText.getText().toString();
-		tts.speak(text, TextToSpeech.QUEUE_FLUSH, null);
+		tts.speak(text, android.speech.tts.TextToSpeech.QUEUE_FLUSH, null);
 	}
 }

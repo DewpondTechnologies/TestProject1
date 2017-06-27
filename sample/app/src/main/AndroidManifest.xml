@@ -18,7 +18,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".AndroidTextToSpeechActivity" />
+        <activity android:name=".TextToSpeech" />
         <activity android:name=".SpeechToText" />
+        <activity android:name=".ListViewWithCount"></activity>
     </application>
+
 </manifest>
