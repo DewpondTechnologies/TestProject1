@@ -20,7 +20,7 @@
         </activity>
         <activity android:name=".TextToSpeech" />
         <activity android:name=".SpeechToText" />
-        <activity android:name=".ListViewWithCount"></activity>
+        <activity android:name=".ListViewWithCount" />
     </application>
 
 </manifest>

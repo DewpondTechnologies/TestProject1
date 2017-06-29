@@ -12,7 +12,8 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class ListViewWithCount extends AppCompatActivity {
+public class ListViewWithCount extends AppCompatActivity
+{
 
     EditText editText;
     Button addButton;
